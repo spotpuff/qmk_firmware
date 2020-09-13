@@ -1,15 +1,18 @@
 #include QMK_KEYBOARD_H
 
-//Layers
+//Layer definitions
 enum layer_names {
     _QWERTY,
     _FN,
     _MEDIA,
 };
 
-//Custom Keymap Definitions
-#define KC_CAD LALT(LCTL(KC_DEL))
+//Keycode definitions
+enum custom_keycodes {
+    KC_CAD = LALT(LCTL(KC_DEL))
+};
 
+//Keymaps
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 /* Qwerty Base layer
