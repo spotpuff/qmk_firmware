@@ -1,14 +1,16 @@
 #include QMK_KEYBOARD_H
 
+//Layer definitions
 enum layer_names {
     _QWERTY,
     _FN,
-	_MEDIA,
+    _MEDIA,
 };
 
-
-
-#define FNM MO(_FNM)
+//Keycode definitions
+enum custom_keycodes {
+    KC_CAD = LALT(LCTL(KC_DEL))
+};
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
