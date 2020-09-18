@@ -1,5 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f079dd90ed88fd29b7e5bbdd3496742f3afeff4e
  /* Copyright 2020 Philip Chan
   * 
   * This program is free software: you can redistribute it and/or modify 
@@ -15,6 +18,9 @@
   * You should have received a copy of the GNU General Public License 
   * along with this program.  If not, see <http://www.gnu.org/licenses/>. 
   */ 
+<<<<<<< HEAD
+>>>>>>> f079dd90ed88fd29b7e5bbdd3496742f3afeff4e
+=======
 >>>>>>> f079dd90ed88fd29b7e5bbdd3496742f3afeff4e
 #include QMK_KEYBOARD_H
 
