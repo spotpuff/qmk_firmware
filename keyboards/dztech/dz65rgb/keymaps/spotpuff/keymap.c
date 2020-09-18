@@ -58,7 +58,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |-----------------------------------------------------------------------------------------------+
  * |       |R_Tog|R_HUI|R_SAI|R_VAI|     |     |     |     |     |     |     |     |  KC_CAD |     |
  * |-----------------------------------------------------------------------------------------------+
- * |  Caps  |     |R_HUD|R_SAD|     |      |     |     |     |     | SLCK|PAUSE| App/Menu    |     |
+ * |  Caps  |     |R_HUD|R_SAD|     |      |     |     |     |     |SLCK |PAUSE|  App/Menu   |     |
  * |-----------------------------------------------------------------------------------------------+
  * |  Trns    |R_M_P|R_M_B|R_M_R|R_M_SW|R_M_S|R_M_K|R_M_X|R_M_G|     |     |     |     |BLUP |     |
  * |-----------------------------------------------------------------------------------------------+
@@ -76,11 +76,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 		*/
 
 	[_FN] = LAYOUT_65_ansi(
-		XXXXXXX, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,   KC_F11,   KC_F12,  XXXXXXX,  KC_INS, \
-		XXXXXXX, RGB_TOG, RGB_HUI, RGB_SAI, RGB_VAI, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,  XXXXXXX,  XXXXXXX,  KC_CAD, _______, \
-		KC_CAPS, XXXXXXX, RGB_HUD, RGB_SAD, RGB_VAD, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_SLCK,  KC_PAUS,            KC_APP, _______, \
-		_______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,  _______,           _______, _______, \
-		_______, _______, _______,                   _______,                            _______, _______,  _______,  _______, _______, _______  \
+		XXXXXXX, KC_F1,   KC_F2,   KC_F3,   KC_F4,    KC_F5,    KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,   KC_F12,  XXXXXXX,  KC_INS, \
+		XXXXXXX, RGB_TOG, RGB_HUI, RGB_SAI, RGB_VAI,  XXXXXXX,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,  XXXXXXX,  KC_CAD, _______, \
+		KC_CAPS, XXXXXXX, RGB_HUD, RGB_SAD, RGB_VAD,  XXXXXXX,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_SLCK, KC_PAUS,            KC_APP, _______, \
+		_______, RGB_M_P, RGB_M_B, RGB_M_R, RGB_M_SW, RGB_M_SN, RGB_M_K, RGB_M_X, RGB_M_G, XXXXXXX, XXXXXXX, XXXXXXX,           _______, _______, \
+		_______, _______, _______,                     _______,                            _______, _______, _______,  _______, _______, _______  \
 	),
 
 	/* SFX/Multimedia/Numpad layer
