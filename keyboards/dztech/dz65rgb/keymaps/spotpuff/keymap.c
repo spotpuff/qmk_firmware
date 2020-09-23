@@ -14,7 +14,7 @@
   * along with this program.  If not, see <http://www.gnu.org/licenses/>. 
   */
 
-//DZ65RGB
+//DZ65RGB - make dztech/dz65rgb/v2:spotpuff
 #include QMK_KEYBOARD_H
 
 //Layer definitions
