@@ -18,14 +18,14 @@
 #include QMK_KEYBOARD_H
 
 //Layer definitions
-enum layer_names {
+enum my_layers {
     _QWERTY,
     _FN,
     _MEDIA,
 };
 
 //Keycode definitions
-enum custom_keycodes {
+enum my_keycodes {
     KC_CAD = LALT(LCTL(KC_DEL))
 };
 
