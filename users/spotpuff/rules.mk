@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-BOOTMAGIC_ENABLE = no	# Virtual DIP switch configuration(+1000)
-=======
-BOOTMAGIC_ENABLE = no
->>>>>>> f079dd90ed88fd29b7e5bbdd3496742f3afeff4e
-=======
-BOOTMAGIC_ENABLE = no
->>>>>>> f079dd90ed88fd29b7e5bbdd3496742f3afeff4e
+# Build Options
+# override the options specified in dz60/rules.mk
+BOOTMAGIC_ENABLE = no   # Virtual DIP switch configuration
+# if this doesn't work, see here: https://github.com/tmk/tmk_keyboard/wiki/FAQ#nkro-doesnt-work
+NKRO_ENABLE = yes       # USB Nkey Rollover
