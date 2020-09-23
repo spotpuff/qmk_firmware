@@ -12,7 +12,9 @@
   * 
   * You should have received a copy of the GNU General Public License 
   * along with this program.  If not, see <http://www.gnu.org/licenses/>. 
-  */ 
+  */
+
+//DZ60
 #include QMK_KEYBOARD_H
 
 //Layer definitions
@@ -22,7 +24,7 @@ enum layer_names {
     _MEDIA,
 };
 
-//Keycode definitions
+//Custom keycodes
 enum custom_keycodes {
     KC_CAD = LALT(LCTL(KC_DEL))
 };
