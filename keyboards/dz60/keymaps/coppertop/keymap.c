@@ -12,19 +12,24 @@
   * 
   * You should have received a copy of the GNU General Public License 
   * along with this program.  If not, see <http://www.gnu.org/licenses/>. 
-  */ 
+  */
+
+//DZ60
 #include QMK_KEYBOARD_H
 
-//Layers
-enum layer_names {
+//Layer definitions
+enum my_layers {
     _QWERTY,
     _FN,
     _MEDIA,
 };
 
-//Custom Keymap Definitions
-#define KC_CAD LALT(LCTL(KC_DEL))
+//Custom keycodes
+enum my_keycodes {
+    KC_CAD = LALT(LCTL(KC_DEL))
+};
 
+//Keymaps
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 /* Qwerty Base layer
