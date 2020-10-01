@@ -12,19 +12,24 @@
   * 
   * You should have received a copy of the GNU General Public License 
   * along with this program.  If not, see <http://www.gnu.org/licenses/>. 
-  */ 
+  */
+
+//DZ60
 #include QMK_KEYBOARD_H
 
-//Layers
-enum layer_names {
+//Layer definitions
+enum my_layers {
     _QWERTY,
     _FN,
     _MEDIA,
 };
 
-//Custom Keymap Definitions
-#define KC_CAD LALT(LCTL(KC_DEL))
+//Custom keycodes
+enum my_keycodes {
+    KC_CAD = LALT(LCTL(KC_DEL))
+};
 
+//Keymaps
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 /* Qwerty Base layer
@@ -46,7 +51,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_TAB,  KC_Q,     KC_W,    KC_E,   KC_R,    KC_T,   KC_Y,    KC_U,   KC_I,    KC_O,    KC_P,    KC_LBRC, KC_RBRC, KC_BSLS, 
         LT(_MEDIA,KC_GRV), KC_A,    KC_S,   KC_D,    KC_F,   KC_G,    KC_H,   KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT, KC_ENT, 
         KC_LSFT, KC_Z,     KC_X,    KC_C,   KC_V,    KC_B,   KC_N,    KC_M,   KC_COMM, KC_DOT,  KC_SLSH, KC_PGUP, KC_UP,   KC_PGDN,
-        KC_LCTL, KC_LGUI,  KC_LALT, KC_SPC, MO(_FN), KC_SPC, KC_HOME, KC_END, KC_LEFT, KC_DOWN, KC_RGHT 
+        KC_LCTL, KC_LGUI,  KC_LALT, KC_SPC,          MO(_FN),         KC_SPC,          KC_HOME, KC_END,  KC_LEFT, KC_DOWN, KC_RGHT 
         ),
 
 /* F-Key/Lighting/whatever layer
@@ -55,7 +60,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |-----------------------------------------------------------------------------------------+
  * |       |R_Tog|R_HUI|R_SAI|R_VAI|     |     |     |     |     |     |     |     |  KC_CAD |
  * |-----------------------------------------------------------------------------------------+
- * |  Caps  |     |R_HUD|R_SAD|     |      |     |     |     |     | SLCK|PAUSE| Print Screen|
+ * |  Caps  |     |R_HUD|R_SAD|R_VAD|     |     |     |     |     |SLCK |PAUSE|  Print Screen|
  * |-----------------------------------------------------------------------------------------+
  * |  Trns    |R_M_P|R_M_B|R_M_R|R_M_SW|R_M_S|R_M_K|R_M_X|R_M_G|     |     |     |BLUP |     |
  * |-----------------------------------------------------------------------------------------+
@@ -68,14 +73,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         XXXXXXX, RGB_TOG, RGB_HUI, RGB_SAI, RGB_VAI,  XXXXXXX,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_CAD,
         KC_CAPS, XXXXXXX, RGB_HUD, RGB_SAD, RGB_VAD,  XXXXXXX,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_SLCK, KC_PAUS, KC_PSCR,
         _______, RGB_M_P, RGB_M_B, RGB_M_R, RGB_M_SW, RGB_M_SN, RGB_M_K, RGB_M_X, RGB_M_G, XXXXXXX, XXXXXXX, XXXXXXX, BL_INC,  XXXXXXX,
-        _______, _______, _______, XXXXXXX, _______,  XXXXXXX,  XXXXXXX, XXXXXXX, BL_TOGG, BL_DEC,  BL_STEP
+        _______, _______, _______, XXXXXXX,           _______,           XXXXXXX,          XXXXXXX, XXXXXXX, BL_TOGG, BL_DEC,  BL_STEP
         ),
 
 /* SFX/Multimedia/Numpad layer
  * ,-----------------------------------------------------------------------------------------.
  * |     |     |     |     |     |     |NumLk|     |  /  |  *  |  -  |  =  |     |Trns |Trns |
  * |-----------------------------------------------------------------------------------------+
- * |        |     | Prev | Play| Next|     |     |  7  |  8  |  9  |  +  |     |     | RESET |
+ * |        |     |Prev |Play |Next |     |     |  7  |  8  |  9  |  +  |     |     | RESET  |
  * |-----------------------------------------------------------------------------------------+
  * |  Trns   |     |Mute | VUp | VDn |     |     |  4  |  5  |  6  |  +  |     |    Trns     |
  * |-----------------------------------------------------------------------------------------+
@@ -90,6 +95,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 		XXXXXXX, XXXXXXX, KC_MPRV, KC_MPLY, KC_MNXT, XXXXXXX, XXXXXXX, KC_P7,   KC_P8,   KC_P9,   KC_PPLS, XXXXXXX, XXXXXXX, RESET,
 		_______, XXXXXXX, KC_MUTE, KC_VOLD, KC_VOLU, XXXXXXX, XXXXXXX, KC_P4,   KC_P5,   KC_P6,   KC_PPLS, XXXXXXX, _______,
 		_______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_P1,   KC_P2,   KC_P3,   KC_PENT, XXXXXXX, XXXXXXX, XXXXXXX,
-		_______, _______, _______, _______, _______, KC_P0,   KC_PDOT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
+		_______, _______, _______, _______,          _______,          KC_P0,            KC_PDOT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
 		)
 };
